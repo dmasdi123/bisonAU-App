@@ -1,4 +1,5 @@
 var penumpang = ["Galang", undefined, "Yeyen"];
+
 var tambahPenumpang = function (namaPenumpang, penumpang) {
   //jika bison amanatul kosong
   if (penumpang.length == 0) {
@@ -26,6 +27,22 @@ var tambahPenumpang = function (namaPenumpang, penumpang) {
         //tambah penumpang di akhir array
         penumpang.push(namaPenumpang);
         //kembalikan isi array dan keluar function
+        return penumpang;
+      }
+    }
+  }
+};
+
+var hapusPenumpang = function (namaPenumpang, penumpang) {
+  if (penumpang.length == 0) {
+    console.log("Angkot masih kosong");
+  } else {
+    for (var i = 0; i < penumpang.length; i++) {
+      if (penumpang[i] == namaPenumpang) {
+        penumpang[i] = undefined;
+        return penumpang;
+      } else if (i == penumpang.length - 1) {
+        console.log("Nama penumpang" + namaPenumpang + "tidak ada di angkot");
         return penumpang;
       }
     }
